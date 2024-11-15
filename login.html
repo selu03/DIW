@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Login</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: 
+            radial-gradient(circle at 40% 60%, green,rgb(49, 48, 48));
+    color: #333;
+           display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-attachment: fixed;
+        }
+        .container {
+            background: 
+            linear-gradient(to bottom left, rgb(30, 143, 30), rgba(136, 167, 127, 0.852)); 
+       padding: 40px;
+            border-radius: 100px;
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color:rgb(7, 57, 7);
+        }
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 15px;
+            color:rgb(7, 57, 7);
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #6d5dfc;
+            outline: none;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 15px 30px;
+            width: 100%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background:  
+            radial-gradient(circle at 40% 60%,rgb(49, 48, 48),green);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background:  
+            radial-gradient(circle at 40% 60%, green,rgb(49, 48, 48));}
+        a {
+            display: block;
+            margin-top: 15px;
+            color:rgb(7, 57, 7);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Iniciar Sesión</h2>
+        <form action="verificar_login.php" method="POST">
+            <label for="nick">Nombre de Usuario o Email:</label>
+            <input type="text" id="nick" name="nick" required>
+
+            <label for="clave">Contraseña:</label>
+            <input type="password" id="clave" name="clave" required>
+
+            <input type="submit" value="Iniciar Sesión">
+            <a href="registro_usuarios.php">¿No tienes cuenta? Regístrate aquí</a>
+            <a href="Restablecer_Contraseña.php">¿Olvidaste la contraseña?</a>
+        </form>
+    </div>
+</body>
+</html>
